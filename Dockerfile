@@ -1,4 +1,4 @@
-FROM wataruito/ubg_core
+FROM wataruito/ubg_core:3.7
 
 # We needed to add the libgtk2.0-dev for GUI
 # 2019/01/17
