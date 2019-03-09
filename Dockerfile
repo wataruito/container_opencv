@@ -1,7 +1,7 @@
 FROM wataruito/ubg_core:3.7
 
-# We needed to add the libgtk2.0-dev for GUI
-# 2019/01/17
+# 2019/01/17 Add the libgtk2.0-dev for GUI
+# 2019/03/08 Ass canberra modules
 RUN apt-get update \
 && apt-get install -y \
 build-essential \
@@ -20,7 +20,11 @@ libtiff-dev \
 libavformat-dev \
 libpq-dev \
 libgtk2.0-dev \
+libcanberra-gtk-module libcanberra-gtk3-module \
 && rm -rf /var/lib/apt/lists/*
+
+
+
 
 WORKDIR /
 ENV OPENCV_VERSION="4.0.1"
